@@ -1,48 +1,77 @@
-# dynicons
+# Dynicons：基于生成式AI的动态图标设计工具
 
-This template should help get you started developing with Vue 3 in Vite.
+## 📖 项目简介
 
-## Recommended IDE Setup
+Dynicons 是一款面向设计师的 AI 动态图标创作工具，支持用户通过自然语言描述图标对象与动作语义，自动生成关键帧并合成动画。
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+传统动效设计依赖专业软件（如 After Effects）和手动关键帧调整，门槛高且效率低。本项目旨在通过生成式AI，将用户的高层语义意图（如“一个跳动的心”）转化为可执行的动画结果，构建从概念到动效的完整创作流程：
 
-## Recommended Browser Setup
+> **文本输入 → 语义解析 → 关键帧生成 → 动画合成 → 编辑与对比**
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+系统同时支持自动生成与用户可控编辑，帮助用户高效探索创意并优化设计结果。
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## ✨ 核心功能
 
-## Customize configuration
+- 🗣️ **自然语言驱动生成**  
+  支持通过文本描述图标对象与动作（如“旋转的星星”）生成动画
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- 🌐 **语义扩展与创意探索**  
+  自动扩展语义组合，提供多种设计候选方案
 
-## Project Setup
+- 🎬 **关键帧自动生成**  
+  根据语义生成动画的起始帧与结束帧
 
-```sh
-npm install
-```
+- 🎥 **动画自动合成**  
+  基于插帧模型生成连贯动画
 
-### Compile and Hot-Reload for Development
+- 🎛️ **运动可控编辑**  
+  支持调整运动轨迹与动画细节
 
-```sh
-npm run dev
-```
+- 🧪 **结果对比与筛选**  
+  支持多结果并排对比，辅助设计决策
 
-### Type-Check, Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+## 🧠 产品设计思路
 
-### Lint with [ESLint](https://eslint.org/)
+Dynicons 被设计为一款 **创意支持工具（Creative Support Tool）**，核心目标是降低动效设计门槛并增强创作表达能力。
 
-```sh
-npm run lint
-```
+### 核心流程
+
+1. 输入语义描述（对象 + 动作）
+2. 语义解析与扩展
+3. 生成关键帧
+4. 合成动画
+5. 结果筛选与编辑优化
+
+### 设计原则
+
+- 降低动效创作门槛  
+- 平衡自动生成与用户控制  
+- 支持创意发散（Divergence）  
+- 支持结果收敛（Convergence）  
+
+---
+
+## 🏗️ 系统架构
+
+系统主要由以下模块构成：
+
+- **语义解析模块（LLM）**：解析输入文本并生成语义组合  
+- **关键帧生成模块**：生成图标起始与结束帧  
+- **动画生成模块**：基于插帧生成连续动画  
+- **交互与可视化模块**：支持编辑与结果展示  
+
+---
+
+## 🚀 Demo 展示
+
+> （建议放 GIF 或视频）
+
+示例流程：
+
+```text
+输入：“一个弹跳的球”
+输出：完整动态图标动画
